@@ -1,6 +1,6 @@
 <template>
   <div>dfdfdf
-    <h1>Guarda todos tus favoritos</h1>
+    <h1>Guarda todos tus favoritos::</h1>
     <p>Hora de Inicio: {{ startTime }}</p>
     <button @click="start">Fichar</button>
     <p>Tiempo de trabajo: {{ hours }}:{{ minutes }}:{{ seconds }}</p>
