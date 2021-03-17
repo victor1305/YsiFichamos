@@ -1,6 +1,6 @@
 <template>
   <div>dfdfdf
-    <h1>Guarda todos tus favoritos::</h1>
+    <h1>Guarda todos tus favoritos y más allá.</h1>
     <p>Hora de Inicio: {{ startTime }}</p>
     <button @click="start">Fichar</button>
     <p>Tiempo de trabajo: {{ hours }}:{{ minutes }}:{{ seconds }}</p>
@@ -26,17 +26,17 @@ export default {
 
   computed: {
     seconds () {
-      return this.counterSeconds.toString().length === 1 
+      return this.counterSeconds.toString().length === 1
         ? `0${this.counterSeconds}`
         : this.counterSeconds
     },
     minutes () {
-      return this.counterMinutes.toString().length === 1 
+      return this.counterMinutes.toString().length === 1
         ? `0${this.counterMinutes}`
         : this.counterMinutes
     },
     hours () {
-      return this.counterHours.toString().length === 1 
+      return this.counterHours.toString().length === 1
         ? `0${this.counterHours}`
         : this.counterHours
     }
