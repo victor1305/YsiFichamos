@@ -1,0 +1,38 @@
+$theme-colors: (
+  "lipstick": #e3286e,
+  "white-three": #f5f5f5,
+  "white-two": #f0f0f0,
+  "brownish-grey": #646464,
+  "brownish-grey-two": #636363,
+  "pinkish-grey": #c8c8c8,
+  "berry": #9f0e59,
+  "black-title": #1e1e1e,
+  "error": #7e001c,
+);
+
+body {
+	margin: 0;
+	padding: 0;
+	font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
+.btn-menu {
+  width: 200px;
+  border-radius: 20px;
+  text-align: center;
+  border: 1px solid #e3286e;
+  color: #e3286e;
+  padding: 10px 20px;
+  background-color: #fff;
+  transition: background-color 0.5s;
+  text-decoration: none;
+  font-size: 14px;
+  cursor: pointer;
+  font-weight: 500;
+  margin: 5px 0;
+
+  &:hover {
+    color: #fff;
+    background-color: #e3286e;
+  }
+}

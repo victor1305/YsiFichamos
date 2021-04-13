@@ -25,9 +25,16 @@ export default {
 
 <style>
   .history-container {
+    margin-top: 100px;
     margin-left: 50px;
     width: 60%;
-    border: 1px solid black;
-    padding: 10px 20px
+    border: 2px solid #e3286e;
+    border-radius: 15px;
+    padding: 10px 0px
+  }
+
+  .day-container {
+    border-bottom: 1px solid black;
+    padding: 0 20px;
   }
 </style>
