@@ -1,16 +1,21 @@
 <template>
-  <div>dfdfdf
-    <h1>Guarda todos tus favoritos y más allá.</h1>
-    <p>Hora de Inicio: {{ startTime }}</p>
-    <button @click="start">Fichar</button>
+  <div class="container">
+    <Clock
+      :date="startTime" 
+      @start-time="start"
+      @pause-time="pause"
+      @stop-time="finish"/>
+    <History />
+    <!-- <p>Hora de Inicio: {{ startTime }}</p>
     <p>Tiempo de trabajo: {{ hours }}:{{ minutes }}:{{ seconds }}</p>
-    <p>Hora de Final: {{ finishTime }}</p>
-    <button @click="finish">Fichar</button>
+    <p>Hora de Final: {{ finishTime }}</p> -->
   </div>
 </template>
 
 <script>
 import dayjs from 'dayjs'
+import Clock from '~/components/Clock'
+import History from '~/components/History.vue'
 
 export default {
   data () {
@@ -22,6 +27,11 @@ export default {
       counterHours: 0,
       timer: null
     }
+  },
+
+  components: {
+    Clock,
+    History
   },
 
   computed: {
@@ -48,6 +58,10 @@ export default {
       this.counter()
     },
 
+    pause () {
+      console.log('PAUSE')
+    },
+
     finish () {
       this.finishTime = dayjs().format('HH:mm')
       clearInterval(this.timer)
@@ -71,5 +85,8 @@ export default {
 </script>
 
 <style>
-
+  .container {
+    display: flex;
+    justify-content: center;
+  }
 </style>
